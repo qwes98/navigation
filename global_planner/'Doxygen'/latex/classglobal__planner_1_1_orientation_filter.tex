@@ -1,0 +1,38 @@
+\hypertarget{classglobal__planner_1_1_orientation_filter}{}\section{global\+\_\+planner\+:\+:Orientation\+Filter Class Reference}
+\label{classglobal__planner_1_1_orientation_filter}\index{global\+\_\+planner\+::\+Orientation\+Filter@{global\+\_\+planner\+::\+Orientation\+Filter}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_a90c8cd6c44018145bf0ae3e71580c1b1}\label{classglobal__planner_1_1_orientation_filter_a90c8cd6c44018145bf0ae3e71580c1b1}} 
+virtual void {\bfseries process\+Path} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&start, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path)
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_a59770ba7f30c0e87e62b407bc44feda1}\label{classglobal__planner_1_1_orientation_filter_a59770ba7f30c0e87e62b407bc44feda1}} 
+void {\bfseries set\+Angle\+Based\+On\+Position\+Derivative} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path, int index)
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_a36817535ca10c2662b6cc2d0919576bf}\label{classglobal__planner_1_1_orientation_filter_a36817535ca10c2662b6cc2d0919576bf}} 
+void {\bfseries interpolate} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path, int start\+\_\+index, int end\+\_\+index)
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_a1934b57509ac8d2074695bee82c8e178}\label{classglobal__planner_1_1_orientation_filter_a1934b57509ac8d2074695bee82c8e178}} 
+void {\bfseries set\+Mode} (Orientation\+Mode new\+\_\+mode)
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_a7419925acb4ebb8b67bf1ae95f9c4333}\label{classglobal__planner_1_1_orientation_filter_a7419925acb4ebb8b67bf1ae95f9c4333}} 
+void {\bfseries set\+Mode} (int new\+\_\+mode)
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_acf2026f87791f87970220d7a42e42422}\label{classglobal__planner_1_1_orientation_filter_acf2026f87791f87970220d7a42e42422}} 
+void {\bfseries set\+Window\+Size} (size\+\_\+t window\+\_\+size)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_a5f155f74ab99402aaaee9f23d8a5741c}\label{classglobal__planner_1_1_orientation_filter_a5f155f74ab99402aaaee9f23d8a5741c}} 
+Orientation\+Mode {\bfseries omode\+\_\+}
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_aed9456a588e42436e590db2a4f0c98dc}\label{classglobal__planner_1_1_orientation_filter_aed9456a588e42436e590db2a4f0c98dc}} 
+int {\bfseries window\+\_\+size\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/global\+\_\+planner/orientation\+\_\+filter.\+h\item 
+src/orientation\+\_\+filter.\+cpp\end{DoxyCompactItemize}

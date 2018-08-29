@@ -1,0 +1,261 @@
+\hypertarget{classglobal__planner_1_1_global_planner}{}\section{global\+\_\+planner\+:\+:Global\+Planner Class Reference}
+\label{classglobal__planner_1_1_global_planner}\index{global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}}
+Inheritance diagram for global\+\_\+planner\+:\+:Global\+Planner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classglobal__planner_1_1_global_planner}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a69b66f59b51665f826a51587afa720ff}\label{classglobal__planner_1_1_global_planner_a69b66f59b51665f826a51587afa720ff}} 
+\mbox{\hyperlink{classglobal__planner_1_1_global_planner_a69b66f59b51665f826a51587afa720ff}{Global\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{class_planner_core}{Planner\+Core}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classglobal__planner_1_1_global_planner_aaeb34983765b053861cbef08e9614bb5}{Global\+Planner}} (std\+::string name, costmap\+\_\+2d\+::\+Costmap2D $\ast$costmap, std\+::string frame\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{class_planner_core}{Planner\+Core}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_aa49ab75794afdbec6aa7c6c3902de4c0}\label{classglobal__planner_1_1_global_planner_aa49ab75794afdbec6aa7c6c3902de4c0}} 
+\mbox{\hyperlink{classglobal__planner_1_1_global_planner_aa49ab75794afdbec6aa7c6c3902de4c0}{$\sim$\+Global\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em Default deconstructor for the \mbox{\hyperlink{class_planner_core}{Planner\+Core}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a280ebb6723d46b462eb66ec73a2fe266}{initialize}} (std\+::string name, costmap\+\_\+2d\+::\+Costmap2\+D\+R\+OS $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em Initialization function for the \mbox{\hyperlink{class_planner_core}{Planner\+Core}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_af3ade8f9f487fe2ddd109f0845a6ffb2}\label{classglobal__planner_1_1_global_planner_af3ade8f9f487fe2ddd109f0845a6ffb2}} 
+void {\bfseries initialize} (std\+::string name, costmap\+\_\+2d\+::\+Costmap2D $\ast$costmap, std\+::string frame\+\_\+id)
+\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_abb7f40f6a851f88e6b7668a38571712a}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&start, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em Given a goal pose in the world, compute a plan. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a4f6bfa5acf58670c01a5b8c684a2f20c}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&start, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal, double tolerance, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em Given a goal pose in the world, compute a plan. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_aa64e1114c4a78980256bd04bd0e79efa}{compute\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Computes the full navigation function for the map given a point in the world to start from. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a4bae9ef237ecc53aa3027abd3dc063b5}{get\+Plan\+From\+Potential}} (double start\+\_\+x, double start\+\_\+y, double end\+\_\+x, double end\+\_\+y, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em Compute a plan to a goal after the potential for a start point has already been computed (Note\+: You should call compute\+Potential first) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a7f0a8eaf0e715f682480ef447a63cd67}{get\+Point\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Get the potential, or naviagation cost, at a given point in the world (Note\+: You should call compute\+Potential first) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a7c50827ebb21a48825d55bda56dd38ac}{valid\+Point\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Check for a valid potential value at a given point in the world (Note\+: You should call compute\+Potential first) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a27405d9450075e6dcc7fc73bd56fb6dc}{valid\+Point\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point, double tolerance)
+\begin{DoxyCompactList}\small\item\em Check for a valid potential value at a given point in the world (Note\+: You should call compute\+Potential first) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a9844153b2bea9032522a2ed528be963f}\label{classglobal__planner_1_1_global_planner_a9844153b2bea9032522a2ed528be963f}} 
+void \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a9844153b2bea9032522a2ed528be963f}{publish\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path)
+\begin{DoxyCompactList}\small\item\em Publish a path for visualization purposes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a760dc206a99babddfacded0558d35208}\label{classglobal__planner_1_1_global_planner_a760dc206a99babddfacded0558d35208}} 
+bool {\bfseries make\+Plan\+Service} (nav\+\_\+msgs\+::\+Get\+Plan\+::\+Request \&req, nav\+\_\+msgs\+::\+Get\+Plan\+::\+Response \&resp)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a790fb19fb46e1a1edc15f98b1075e849}\label{classglobal__planner_1_1_global_planner_a790fb19fb46e1a1edc15f98b1075e849}} 
+costmap\+\_\+2d\+::\+Costmap2D $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a790fb19fb46e1a1edc15f98b1075e849}{costmap\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store a copy of the current costmap in {\itshape costmap}. Called by make\+Plan. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a4a8bf49e32dcae69b02adabe35b99ed0}\label{classglobal__planner_1_1_global_planner_a4a8bf49e32dcae69b02adabe35b99ed0}} 
+std\+::string {\bfseries frame\+\_\+id\+\_\+}
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_ae90f4043291a203f62ad9259796792dc}\label{classglobal__planner_1_1_global_planner_ae90f4043291a203f62ad9259796792dc}} 
+ros\+::\+Publisher {\bfseries plan\+\_\+pub\+\_\+}
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_abd54fe2b4a6f92fec92e49da3739e016}\label{classglobal__planner_1_1_global_planner_abd54fe2b4a6f92fec92e49da3739e016}} 
+bool {\bfseries initialized\+\_\+}
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_adc356fbcaa27c897710becc5f7ad9777}\label{classglobal__planner_1_1_global_planner_adc356fbcaa27c897710becc5f7ad9777}} 
+bool {\bfseries allow\+\_\+unknown\+\_\+}
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a74d3e7b867447cea6d718350fc0b303b}\label{classglobal__planner_1_1_global_planner_a74d3e7b867447cea6d718350fc0b303b}} 
+bool {\bfseries visualize\+\_\+potential\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_aaeb34983765b053861cbef08e9614bb5}\label{classglobal__planner_1_1_global_planner_aaeb34983765b053861cbef08e9614bb5}} 
+\index{global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}!Global\+Planner@{Global\+Planner}}
+\index{Global\+Planner@{Global\+Planner}!global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}}
+\subsubsection{\texorpdfstring{Global\+Planner()}{GlobalPlanner()}}
+{\footnotesize\ttfamily global\+\_\+planner\+::\+Global\+Planner\+::\+Global\+Planner (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{costmap\+\_\+2d\+::\+Costmap2D $\ast$}]{costmap,  }\item[{std\+::string}]{frame\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{class_planner_core}{Planner\+Core}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of this planner \\
+\hline
+{\em costmap} & A pointer to the costmap to use \\
+\hline
+{\em frame\+\_\+id} & Frame of the costmap \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_aa64e1114c4a78980256bd04bd0e79efa}\label{classglobal__planner_1_1_global_planner_aa64e1114c4a78980256bd04bd0e79efa}} 
+\index{global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}!compute\+Potential@{compute\+Potential}}
+\index{compute\+Potential@{compute\+Potential}!global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}}
+\subsubsection{\texorpdfstring{compute\+Potential()}{computePotential()}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::compute\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Computes the full navigation function for the map given a point in the world to start from. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world\+\_\+point} & The point to use for seeding the navigation function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the navigation function was computed successfully, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a4bae9ef237ecc53aa3027abd3dc063b5}\label{classglobal__planner_1_1_global_planner_a4bae9ef237ecc53aa3027abd3dc063b5}} 
+\index{global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}!get\+Plan\+From\+Potential@{get\+Plan\+From\+Potential}}
+\index{get\+Plan\+From\+Potential@{get\+Plan\+From\+Potential}!global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}}
+\subsubsection{\texorpdfstring{get\+Plan\+From\+Potential()}{getPlanFromPotential()}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::get\+Plan\+From\+Potential (\begin{DoxyParamCaption}\item[{double}]{start\+\_\+x,  }\item[{double}]{start\+\_\+y,  }\item[{double}]{end\+\_\+x,  }\item[{double}]{end\+\_\+y,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})}
+
+
+
+Compute a plan to a goal after the potential for a start point has already been computed (Note\+: You should call compute\+Potential first) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+\_\+x} & \\
+\hline
+{\em start\+\_\+y} & \\
+\hline
+{\em end\+\_\+x} & \\
+\hline
+{\em end\+\_\+y} & \\
+\hline
+{\em goal} & The goal pose to create a plan to \\
+\hline
+{\em plan} & The plan... filled by the planner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid plan was found, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a7f0a8eaf0e715f682480ef447a63cd67}\label{classglobal__planner_1_1_global_planner_a7f0a8eaf0e715f682480ef447a63cd67}} 
+\index{global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}!get\+Point\+Potential@{get\+Point\+Potential}}
+\index{get\+Point\+Potential@{get\+Point\+Potential}!global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}}
+\subsubsection{\texorpdfstring{get\+Point\+Potential()}{getPointPotential()}}
+{\footnotesize\ttfamily double global\+\_\+planner\+::\+Global\+Planner\+::get\+Point\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Get the potential, or naviagation cost, at a given point in the world (Note\+: You should call compute\+Potential first) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world\+\_\+point} & The point to get the potential for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The navigation function\textquotesingle{}s value at that point in the world 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a280ebb6723d46b462eb66ec73a2fe266}\label{classglobal__planner_1_1_global_planner_a280ebb6723d46b462eb66ec73a2fe266}} 
+\index{global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}!initialize@{initialize}}
+\index{initialize@{initialize}!global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Global\+Planner\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{costmap\+\_\+2d\+::\+Costmap2\+D\+R\+OS $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})}
+
+
+
+Initialization function for the \mbox{\hyperlink{class_planner_core}{Planner\+Core}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of this planner \\
+\hline
+{\em costmap\+\_\+ros} & A pointer to the R\+OS wrapper of the costmap to use for planning \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_abb7f40f6a851f88e6b7668a38571712a}\label{classglobal__planner_1_1_global_planner_abb7f40f6a851f88e6b7668a38571712a}} 
+\index{global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}!make\+Plan@{make\+Plan}}
+\index{make\+Plan@{make\+Plan}!global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}}
+\subsubsection{\texorpdfstring{make\+Plan()}{makePlan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})}
+
+
+
+Given a goal pose in the world, compute a plan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & The start pose \\
+\hline
+{\em goal} & The goal pose \\
+\hline
+{\em plan} & The plan... filled by the planner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid plan was found, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a4f6bfa5acf58670c01a5b8c684a2f20c}\label{classglobal__planner_1_1_global_planner_a4f6bfa5acf58670c01a5b8c684a2f20c}} 
+\index{global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}!make\+Plan@{make\+Plan}}
+\index{make\+Plan@{make\+Plan}!global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}}
+\subsubsection{\texorpdfstring{make\+Plan()}{makePlan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{double}]{tolerance,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})}
+
+
+
+Given a goal pose in the world, compute a plan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & The start pose \\
+\hline
+{\em goal} & The goal pose \\
+\hline
+{\em tolerance} & The tolerance on the goal point for the planner \\
+\hline
+{\em plan} & The plan... filled by the planner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid plan was found, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a7c50827ebb21a48825d55bda56dd38ac}\label{classglobal__planner_1_1_global_planner_a7c50827ebb21a48825d55bda56dd38ac}} 
+\index{global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}!valid\+Point\+Potential@{valid\+Point\+Potential}}
+\index{valid\+Point\+Potential@{valid\+Point\+Potential}!global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}}
+\subsubsection{\texorpdfstring{valid\+Point\+Potential()}{validPointPotential()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::valid\+Point\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Check for a valid potential value at a given point in the world (Note\+: You should call compute\+Potential first) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world\+\_\+point} & The point to get the potential for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the navigation function is valid at that point in the world, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a27405d9450075e6dcc7fc73bd56fb6dc}\label{classglobal__planner_1_1_global_planner_a27405d9450075e6dcc7fc73bd56fb6dc}} 
+\index{global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}!valid\+Point\+Potential@{valid\+Point\+Potential}}
+\index{valid\+Point\+Potential@{valid\+Point\+Potential}!global\+\_\+planner\+::\+Global\+Planner@{global\+\_\+planner\+::\+Global\+Planner}}
+\subsubsection{\texorpdfstring{valid\+Point\+Potential()}{validPointPotential()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::valid\+Point\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point,  }\item[{double}]{tolerance }\end{DoxyParamCaption})}
+
+
+
+Check for a valid potential value at a given point in the world (Note\+: You should call compute\+Potential first) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world\+\_\+point} & The point to get the potential for \\
+\hline
+{\em tolerance} & The tolerance on searching around the world\+\_\+point specified \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the navigation function is valid at that point in the world, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/global\+\_\+planner/planner\+\_\+core.\+h\item 
+src/planner\+\_\+core.\+cpp\end{DoxyCompactItemize}
